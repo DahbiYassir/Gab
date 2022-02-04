@@ -34,7 +34,6 @@ useEffect(async()=>{
 
                     await axios.get("https://client-servicee.herokuapp.com/clients/cin/"+props.transfert.clientDonneur)
                     .then(res=>{
-                        setStatus({ auth: res.status === 202, loaded: true })
                         console.log(res.data);
                         setValues({...values,client:res.data})
 
